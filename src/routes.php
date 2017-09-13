@@ -1,10 +1,10 @@
 <?php
 
-Route::group(['middleware' => ['web']], function (){
+Route::group(['middleware' => ['web']], function () {
 
     Route::get('/timeline/{user_id}', [
-        'uses' => 'affenpilot\timeline\Controllers\TimelineController@getTimeline',
-        'as'    => 'timeline',
+        'uses'       => 'affenpilot\timeline\Controllers\TimelineController@getTimeline',
+        'as'         => 'timeline',
         'middleware' => 'auth'
     ]);
 
@@ -15,8 +15,8 @@ Route::group(['middleware' => ['web']], function (){
     ]);
 
     Route::post('createpost/{user_id}', [
-        'uses' => 'affenpilot\timeline\Controllers\PostController@postCreatePost',
-        'as' => 'post.create',
+        'uses'       => 'affenpilot\timeline\Controllers\PostController@postCreatePost',
+        'as'         => 'post.create',
         'middleware' => 'auth'
     ]);
 });

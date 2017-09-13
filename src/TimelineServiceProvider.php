@@ -23,7 +23,7 @@ class TimelineServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        include __DIR__ . '/routes.php';
+        include __DIR__.'/routes.php';
         $this->app->make('Affenpilot\Timeline\Controllers\TimelineController');
         $this->app->make('Affenpilot\Timeline\Controllers\PostController');
         $this->loadViewsFrom(__DIR__.'/Views', 'timeline');
