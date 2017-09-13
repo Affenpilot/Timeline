@@ -1,7 +1,6 @@
 <?php
 
 Route::group(['middleware' => ['web']], function () {
-
     Route::get('/timeline/{user_id}', [
         'uses'       => 'affenpilot\timeline\Controllers\TimelineController@getTimeline',
         'as'         => 'timeline',
