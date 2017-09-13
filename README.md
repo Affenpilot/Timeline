@@ -1,1 +1,1 @@
-Test
+[![StyleCI](https://styleci.io/repos/103454695/shield?branch=develop)](https://styleci.io/repos/103454695)
