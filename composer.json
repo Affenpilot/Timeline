@@ -1,18 +1,18 @@
 {
     "name": "affenpilot/timeline",
     "description": "This package is used for timeline.",
-	"keywords": ["laravel", "package", "Timeline"],
-	"authors": [{
-        "name": "Florian Büchner"
+    "keywords": ["laravel", "package", "Timeline"],
+    "authors": [{
+        "name": "Florian Buechner"
     }],
     "require": {
-		"php": "^5.6",
-	},
-	"autoload": {
+        "php": "^5.6"
+    },
+    "autoload": {
         "psr-4": {
-			"Affenpilot\\Timeline\\": "src/",
+            "Affenpilot\\Timeline\\": "src/"
         }
     },
-	"minimum-stability": "dev",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
