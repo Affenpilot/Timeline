@@ -6,8 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public function user()
+    /**
+     * @var string
+     */
+    public $table = 'posts';
+
+    /**
+     * @var array
+     */
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     */
+    public function author()
     {
-        //do something
+        return $this->morphTo('author');
     }
+
 }
