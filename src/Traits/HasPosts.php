@@ -22,7 +22,7 @@ trait HasPosts
 
     /**
      * @param string $related
-     * @param null $foreignKey
+     * @param null   $foreignKey
      *
      * @return hasOne
      */
@@ -43,12 +43,12 @@ trait HasPosts
 
     /**
      * @param string $body
-     * @param Model $author
-     * @param Model $timeline_from
+     * @param Model  $author
+     * @param Model  $timeline_from
      *
      * @return bool
      */
-    public function createPost(String $body , Model $author, Model $timeline_from): bool
+    public function createPost(String $body, Model $author, Model $timeline_from): bool
     {
         $post = (new Post())->forceFill([
             'body'          => $body,
