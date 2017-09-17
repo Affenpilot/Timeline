@@ -7,8 +7,8 @@ namespace Affenpilot\Timeline;
 use Affenpilot\Timeline\Models\Post;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\hasOne;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait HasPosts
 {
@@ -21,31 +21,34 @@ trait HasPosts
     }
 
     /**
-     * @param String $related
+     * @param string $related
      * @param null $foreignKey
+     *
      * @return hasOne
      */
-    public function timelinefrom( String $related, $foreignKey = null ): hasOne
+    public function timelinefrom(String $related, $foreignKey = null): hasOne
     {
         return $this->hasOne($related, $foreignKey);
     }
 
     /**
      * @param $user_id
+     *
      * @return \Illuminate\Database\Eloquent\Collection|static[]
      */
-    public function getTimeLineFromUser( $user_id ): Collection
+    public function getTimeLineFromUser($user_id): Collection
     {
         return Post::where('timeline_id', $user_id)->get();
     }
 
     /**
-     * @param String $body
+     * @param string $body
      * @param Model $author
      * @param Model $timeline_from
+     *
      * @return bool
      */
-    public function createPost( String $body , Model $author, Model $timeline_from): bool
+    public function createPost(String $body , Model $author, Model $timeline_from): bool
     {
         $post = (new Post())->forceFill([
             'body'          => $body,
@@ -56,6 +59,5 @@ trait HasPosts
         ]);
 
         return (bool) $this->posts()->save($post);
-
     }
 }

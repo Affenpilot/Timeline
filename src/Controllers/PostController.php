@@ -2,23 +2,23 @@
 
 namespace Affenpilot\Timeline\Controllers;
 
-use App\Http\Controllers\Controller;
 use Affenpilot\Timeline\Models\Post;
-
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
     /**
      * @param Request $request
      * @param $user_id
+     *
      * @return \Illuminate\Http\RedirectResponse
      */
     public function postCreatePost(Request $request, $user_id)
     {
         $this->validate($request, [
-            'body' => 'required|max:1000'
+            'body' => 'required|max:1000',
         ]);
 
         $request->user()->createPost(
@@ -35,6 +35,7 @@ class PostController extends Controller
 
     /**
      * @param $post_id
+     *
      * @return \Illuminate\Http\RedirectResponse
      */
     public function getDeletePost($post_id)
@@ -46,6 +47,7 @@ class PostController extends Controller
         }
 
         $post->delete();
+
         return redirect()->route(
             'timeline',
             ['user_id' => Auth::user()->id]
