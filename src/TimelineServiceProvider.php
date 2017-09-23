@@ -13,9 +13,15 @@ class TimelineServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/Views', 'timeline');
+
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('/migrations'),
         ], 'migrations');
+
+        $this->publishes([
+            __DIR__.'/Views' => resource_path('views/vendor/timeline'),
+        ]);
     }
 
     /**
@@ -28,6 +34,5 @@ class TimelineServiceProvider extends ServiceProvider
         include __DIR__.'/routes.php';
         $this->app->make('Affenpilot\Timeline\Controllers\TimelineController');
         $this->app->make('Affenpilot\Timeline\Controllers\PostController');
-        $this->loadViewsFrom(__DIR__.'/Views', 'timeline');
     }
 }
