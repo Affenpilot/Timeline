@@ -20,14 +20,16 @@ Publish and migrate:
 
 ## Usage
 
-    <?php
-    
-    namespace App;
-    
-    use Affenpilot\Timeline\HasPosts;
-    use Illuminate\Database\Eloquent\Model;
-    
-    class User extends Model
-    {
-        use HasPosts;
-    }
+```PHP
+<?php
+
+namespace App;
+
+use Affenpilot\Timeline\HasPosts;
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    use HasPosts;
+}
+```
