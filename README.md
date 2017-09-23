@@ -1,10 +1,10 @@
 [![StyleCI](https://styleci.io/repos/103454695/shield?branch=develop)](https://styleci.io/repos/103454695)
 
-#Affenpilot Timeline
+# Affenpilot Timeline
 
 This is a basic timeline module for Laravel.
 
-##Installation
+## Installation
 
 Add the following line in the providers array in 'config\app.php':
 
@@ -18,7 +18,7 @@ Publish and migrate:
 
     php artisan vendor:publish --provider="Affenpilot\Timeline\TimelineServiceProvider"
 
-##Usage
+## Usage
 
     <?php
     
