@@ -1,3 +1,5 @@
+[![StyleCI](https://styleci.io/repos/103454695/shield?branch=master)](https://styleci.io/repos/103454695)
+
 # Affenpilot Timeline
 
 This is a basic timeline module for Laravel.
