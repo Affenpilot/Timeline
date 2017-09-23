@@ -16,6 +16,7 @@ Add the following line in the providers array in 'config\app.php':
     Affenpilot\Timeline\TimelineServiceProvider::class
     ...
 ]
+
 ...
 ```
 
