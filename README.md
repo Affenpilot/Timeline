@@ -1,1 +1,2 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9e2e838e3f864e209f2b0c380fbfb02f)](https://www.codacy.com/app/flori.buechner90/Timeline?utm_source=github.com&utm_medium=referral&utm_content=Affenpilot/Timeline&utm_campaign=badger)
 [![StyleCI](https://styleci.io/repos/103454695/shield?branch=develop)](https://styleci.io/repos/103454695)
