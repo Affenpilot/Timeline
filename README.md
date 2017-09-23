@@ -8,11 +8,16 @@ This is a basic timeline module for Laravel.
 
 Add the following line in the providers array in 'config\app.php':
 
-    'providers' => [
-        ...
-        Affenpilot\Timeline\TimelineServiceProvider::class
-        ...
-    ]
+```PHP
+...
+
+'providers' => [
+    ...
+    Affenpilot\Timeline\TimelineServiceProvider::class
+    ...
+]
+...
+```
 
 Publish and migrate:
 
