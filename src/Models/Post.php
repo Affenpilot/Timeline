@@ -9,7 +9,7 @@ class Post extends Model
     /**
      * @var string
      */
-    public $table = 'posts';
+    public $table = 'timeline_posts';
 
     /**
      * @var array
